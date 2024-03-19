@@ -68,4 +68,33 @@ function multiplyByTwo(val) {
   return val.map((res) => res * 2);
 }
 let newArr = multiplyByTwo(arr);
-console.log(newArr);
+console.log(newArr, "Multiply by 2 each element of array");
+
+function makeAllElementUppercase(strArray) {
+  return strArray.map((res) => res.toUpperCase());
+}
+
+const newUpperCaseArrStr = makeAllElementUppercase(arrOfString);
+console.log(
+  newUpperCaseArrStr,
+  "UpperCase alphabet each  element string of arr"
+);
+
+function makeFirstAlphabetUpper(arrStr) {
+  return arrStr.map((res) => res.split("")[0].toUpperCase() + res.slice(1));
+}
+
+const firstAlphabetsUpper = makeFirstAlphabetUpper(arrOfString);
+console.log(
+  firstAlphabetsUpper,
+  "Making first word in UpperCase in each element"
+);
+
+// ******************************reduce-method*********************
+
+function sumOfNum(numArr) {
+  return numArr.reduce((acc, curr) => acc + curr, 0);
+}
+
+const total = sumOfNum(arr);
+console.log(total, "Sum of numbers of array using reduce method");
